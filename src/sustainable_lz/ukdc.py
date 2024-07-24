@@ -9,8 +9,9 @@ import matplotlib.dates as mdates
 from datetime import datetime
 import numpy as np
 import json
+import tqdm
 
-def get_account_jobs(account_id: str) -> List[str]:
+def get_account_jobs(account_id: str) -> list[str]:
     """
     This function retrieves a list of job IDs associated with a given account ID.
 
@@ -21,7 +22,7 @@ def get_account_jobs(account_id: str) -> List[str]:
 
     Returns
     -------
-    List[str]
+    list[str]
         A list of job IDs associated with the given account ID.
     """
     # Implementation of get_account_jobs function goes here
@@ -30,13 +31,13 @@ def get_account_jobs(account_id: str) -> List[str]:
     result = account_id.run(command, capture_output=True, text=True, shell=True)
     return [(j.split(' ')[0]).split('=')[1] for j in result.stdout.split('\n')[:-1]]
 
-def get_job_details(job_id: str | List[str]) -> str:
+def get_job_details(job_id: str | list[str]) -> str:
     """
     This function retrieves detailed information about a job or a list of jobs.
 
     Parameters
     ----------
-    job_id: str | List[str]
+    job_id: str | list[str]
         The ID(s) of the job(s) for which detailed information is to be retrieved.
         If a list, the function will return detailed information for all job IDs.
 
