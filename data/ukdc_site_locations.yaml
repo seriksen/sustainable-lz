@@ -1,0 +1,80 @@
+RALPP:
+  Longitude: 51.57458309076929
+  Latitude: -1.3146324430807472
+  Name: Rutherford Appleton Laboratory
+  Used: True
+BRIS:
+  Longitude: 51.45865790041845
+  Latitude: -2.6021650737694344
+  Name: University of Bristol
+  Used: True
+GLASGOW:
+  Longitude: 55.871254818380294
+  Latitude: -4.288661402390661
+  Name: University of Glasgow
+  Used: True
+ECDF:
+  Longitude: 55.9446179107142
+  Latitude: -3.1891447428683115
+  Name: University of Edinburgh
+  Used: True
+SHEF:
+  Longitude: 53.381484563734645
+  Latitude: -1.4883156141591491
+  Name: University of Sheffield
+  Used: True
+MAN:
+  Longitude: 53.46691363972846
+  Latitude: -2.2337549564841943
+  Name: University of Manchester
+  Used: True
+LIV:
+  Longitude: 53.407263843198585
+  Latitude: -2.9649981540991472
+  Name: University of Liverpool
+  Used: True
+LANCS:
+  Longitude: 54.01051396117801
+  Latitude: -2.787697215976443
+  Name: Lancaster University
+  Used: True
+RHUL:
+  Longitude: 51.42484346930371
+  Latitude: -0.5666957584294079
+  Name: Royal Holloway, University of London
+  Used: True
+QMUL1:
+  Longitude: 51.52475741473755
+  Latitude: -0.04034438345441868
+  Name: Queen Mary University of London
+  Used: True
+IC:
+  Longitude: 51.49898914725747
+  Latitude: -0.17498079095701363
+  Name: Imperial College London
+  Used: True
+Brunel:
+  Longitude: 51.53227235455582
+  Latitude: -0.4726098277411042 
+  Name: Brunel University London
+  Used: True
+BRUM:
+  Longitude: 52.45352349422258
+  Latitude: -1.9283653990548415 
+  Name: University of Birmingham
+  Used: False
+OX:
+  Longitude: 51.75715577080092
+  Latitude: -1.2544749872491594 
+  Name: University of Oxford
+  Used: False
+CAM:
+  Longitude: 52.20560907342578
+  Latitude: 0.11355154097831735 
+  Name: University of Cambridge
+  Used: False
+SUSS:
+  Longitude: 50.867820609281985
+  Latitude: -0.08745264311377886 
+  Name: University of Sussex
+  Used: False
