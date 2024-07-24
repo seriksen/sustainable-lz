@@ -2,7 +2,7 @@
 
 import tqdm
 import subprocess
-from datetime import datetime
+import datetime
 
 def convert_string_to_float(s: str) -> float:
     """
