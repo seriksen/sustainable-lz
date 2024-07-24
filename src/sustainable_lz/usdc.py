@@ -77,6 +77,7 @@ def get_account_usage(account_name: str, start_year: int = 2021) -> dict:
                 print("Error running sreport:", result.stderr)
                 values[start_date_str] = 0.0
 
+            current_date += datetime.timedelta(days=1)
             pbar.update(1)
 
     return values
@@ -128,6 +129,7 @@ def get_user_usage(user: str, start_year: int = 2021) -> dict:
                 print("Error running sreport:", result.stderr)
                 values[start_date_str] = 0.0
 
+            current_date += datetime.timedelta(days=1)
             pbar.update(1)
 
     return values
