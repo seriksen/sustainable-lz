@@ -1,0 +1,7 @@
+numpy
+pandas
+gspread
+gspread_dataframe
+geopandas
+matplotlib
+geopy
