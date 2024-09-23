@@ -16,6 +16,9 @@
 
 Repo for calculating the carbon associated with the LUX-ZEPLIN experiment.
 
+This is not longer pushed to. 
+Code has been moved to gitlab. 
+
 
 # Installation
 This can be installed via
