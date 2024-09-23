@@ -7,7 +7,7 @@ sustainable-lz: Determine carbon emissions of LUX-ZEPLIN dark matter experiment
 # import all functions from ukdc and usdc
 from . import ukdc
 from . import usdc
-
+from . import flights_v2
 from ._version import get_versions
 
 __version__ = get_versions()["version"]
