@@ -54,7 +54,7 @@ class flight_emission_calc_v2:
         if emission_factor is not None:
             self.emission_factor=emission_factor
             
-    def calculate_emission_for_factors(factors,distance):
+    def calculate_emission_for_factors(self,factors,distance):
         #caculate kg of CO2
         x=factors['DC']+distance
         E=(factors['a']*x**2+factors['b']*x+factors['c'])/(factors['S']*factors['PLF'])
@@ -62,14 +62,14 @@ class flight_emission_calc_v2:
         E+=factors['AF']*x+factors['A']
         return E
     
-    def calc_emissions_v2(distance):
+    def calc_emissions_v2(self,distance):
         #not yet calculating layovers
         if distance>=long_cut:
-            return 2*(calculate_emission_for_factors(long_haul_factors,distance))/1e3
+            return 2*(self.calculate_emission_for_factors(long_haul_factors,distance))/1e3
         elif distance<=interpolate_above:
-            return 2*(calculate_emission_for_factors(short_haul_factors,distance))/1e3
+            return 2*(self.calculate_emission_for_factors(short_haul_factors,distance))/1e3
         else:
-            short_haul_co2=calculate_emission_for_factors(short_haul_factors,distance)
-            long_haul_co2=calculate_emission_for_factors(long_haul_factors,distance)
+            short_haul_co2=self.calculate_emission_for_factors(short_haul_factors,distance)
+            long_haul_co2=self.calculate_emission_for_factors(long_haul_factors,distance)
             m=(long_haul_co2-short_haul_co2)/(long_cut-interpolate_above)
             return 2*(m*(distance-interpolate_above)+short_haul_co2)/1e3
