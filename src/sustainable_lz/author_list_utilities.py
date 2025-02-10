@@ -83,6 +83,9 @@ class author_list_util:
         institutions['longitude'] = institutions['location'].apply(self.get_longitude)
         institutions['latitude'] = institutions['location'].apply(self.get_latitude)
         institutions[['longitude', 'latitude']] = institutions.apply(lambda row: self.correct_none(row) if pd.isna(row['latitude']) else (row['longitude'], row['latitude']), axis=1, result_type='expand')
+        print("Correcting funky beahvoiur for Maryland")
+        institutions.loc[institutions['University']=='University of Maryland','latitude']=38.98582939 
+        institutions.loc[institutions['University']=='University of Maryland','longitude']=-76.937329584
         self.institutions=institutions
         self.backup_institutions=deepcopy(institutions)
 
